@@ -9,9 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx prisma generate && tsc",
-    "start": "node dist/server.js",
-    "postinstall": "npx prisma generate && npx prisma db push",
+    "build": "npx prisma generate && npx prisma db push && tsc",
+    "start": "npm run seed && node dist/server.js",
     "dev": "tsx watch src/server.ts",
     "seed": "tsx prisma/seed.ts"
   },

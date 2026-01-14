@@ -1,0 +1,30 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Claim {
+  id              String   @id @default(uuid())
+  claimNumber     String   @unique
+  userId          String
+  description     String
+  incidentDate    DateTime
+  location        String
+  status          String   @default("PENDIENTE")
+  amount          Float?
+  notes           String?
+  images          Image[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Image {
+  id      String @id @default(uuid())
+  url     String
+  claimId String
+  claim   Claim  @relation(fields: [claimId], references: [id])
+}

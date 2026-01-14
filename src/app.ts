@@ -17,7 +17,12 @@ const app = express();
 app.use(helmet());
 
 // Middlewares base
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://front-sistema-de-gestion-de-siniestros.onrender.com',
+    'http://localhost:9000'
+  ]
+}));
 app.use(express.json({ limit: '10mb' })); // Limitar tamaño de payload
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 

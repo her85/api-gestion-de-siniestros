@@ -19,13 +19,13 @@ const options = {
             }
         },
         servers: [
+            /* {
+               url: 'http://localhost:3000',
+               description: 'Servidor de desarrollo'
+             }*/
             {
-                url: 'http://localhost:3000',
+                url: 'https://api-gestion-de-siniestros.onrender.com',
                 description: 'Servidor de desarrollo'
-            },
-            {
-                url: 'https://api-production.com',
-                description: 'Servidor de producción'
             }
         ],
         tags: [

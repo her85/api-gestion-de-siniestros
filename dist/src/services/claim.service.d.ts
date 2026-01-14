@@ -5,12 +5,14 @@ import type { Claim } from '@prisma/client';
 export declare class ClaimService {
     private claimRepository;
     constructor(claimRepository: ClaimRepository);
+    private generateClaimNumber;
     create(data: CreateClaimDTO): Promise<Claim>;
     getAll(filters: {
         status?: string;
         date?: Date;
     }): Promise<{
         id: string;
+        claimNumber: string;
         userId: string;
         description: string;
         incidentDate: Date;
@@ -23,6 +25,7 @@ export declare class ClaimService {
     }[]>;
     getById(id: string): Promise<{
         id: string;
+        claimNumber: string;
         userId: string;
         description: string;
         incidentDate: Date;
@@ -35,6 +38,7 @@ export declare class ClaimService {
     }>;
     updateStatus(id: string, newStatus: ClaimStatus, amount?: number): Promise<{
         id: string;
+        claimNumber: string;
         userId: string;
         description: string;
         incidentDate: Date;

@@ -1,4 +1,15 @@
+import { ZodError } from 'zod';
 export const errorHandler = (err, req, res, next) => {
+    // Traducir errores de validación de Zod a 400 Bad Request
+    if (err instanceof ZodError || err?.name === 'ZodError') {
+        const errors = (err.errors || []).map((e) => ({ path: e.path.join('.'), message: e.message }));
+        res.status(400).json({
+            success: false,
+            message: 'Validation error',
+            errors
+        });
+        return;
+    }
     const status = err.status || 500;
     res.status(status).json({
         success: false,

@@ -1,10 +1,12 @@
-// src/repositories/claim.repository.ts
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { prisma } from '../config/database.js';
 export class ClaimRepository {
-    async create(data) {
+    async count() {
+        return prisma.claim.count();
+    }
+    async create(data, claimNumber) {
         return prisma.claim.create({
             data: {
+                claimNumber,
                 userId: data.userId,
                 description: data.description,
                 incidentDate: data.incidentDate,

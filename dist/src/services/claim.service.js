@@ -6,10 +6,16 @@ export class ClaimService {
     constructor(claimRepository) {
         this.claimRepository = claimRepository;
     }
+    async generateClaimNumber() {
+        const year = new Date().getFullYear();
+        const count = await this.claimRepository.count();
+        const number = String(count + 1).padStart(4, '0');
+        return `SIN-${year}-${number}`;
+    }
     async create(data) {
-        // El servicio puede agregar lógica de negocio aquí
-        // Por ejemplo: validar que el usuario existe, procesar imágenes, etc.
-        const claim = await this.claimRepository.create(data);
+        // Generar número de siniestro
+        const claimNumber = await this.generateClaimNumber();
+        const claim = await this.claimRepository.create(data, claimNumber);
         // Emitir evento de creación
         claimEvents.emit('claimCreated', claim);
         return claim;

@@ -9,25 +9,7 @@ const options = {
             title: 'API de Gestión de Siniestros',
             version: '1.0.0',
             description: 'API REST para la gestión de siniestros con Express y Prisma',
-            contact: {
-                name: 'Equipo de Desarrollo',
-                email: 'dev@gestion-siniestros.com'
-            },
-            license: {
-                name: 'ISC',
-                url: 'https://opensource.org/licenses/ISC'
-            }
         },
-        servers: [
-            /* {
-               url: 'http://localhost:3000',
-               description: 'Servidor de desarrollo'
-             }*/
-            {
-                url: 'https://api-gestion-de-siniestros.onrender.com',
-                description: 'Servidor de desarrollo'
-            }
-        ],
         tags: [
             {
                 name: 'Claims',

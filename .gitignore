@@ -7,14 +7,6 @@ node_modules/
 .env.*.local
 .env.*          # opcional: ignora todos .env.*, excepto .env.example
 
-# Build / TypeScript
-
-build/
-lib/
-*.tsbuildinfo
-**/*.js
-**/*.js.map
-
 # Prisma / DB
 /src/generated/prisma/
 node_modules/.prisma/

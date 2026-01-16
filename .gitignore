@@ -10,7 +10,7 @@ node_modules/
 # Prisma / DB
 /src/generated/prisma/
 node_modules/.prisma/
-*.db
+
 
 # Logs & coverage
 *.log

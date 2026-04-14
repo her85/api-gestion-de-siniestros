@@ -30,7 +30,7 @@ async function main() {
             description: 'Robo de vehículo en estacionamiento. Se forzó la cerradura del lado del conductor. Vidrio lateral roto.',
             incidentDate: new Date('2026-01-08T22:15:00'),
             location: 'Shopping Alto Rosario, Estacionamiento Subsuelo 2, Rosario, Santa Fe',
-            status: 'EN_REVISIÓN',
+            status: 'EN REVISIÓN',
             amount: null,
             notes: 'Se ha solicitado reporte policial'
         },
@@ -75,7 +75,7 @@ async function main() {
             description: 'Choque en estacionamiento privado. Golpe al retroceder contra columna. Daños en parachoques trasero.',
             incidentDate: new Date('2025-12-20T19:30:00'),
             location: 'Edificio Torre Catalinas, Estacionamiento Piso 2, Puerto Madero, CABA',
-            status: 'EN_REVISIÓN',
+            status: 'EN REVISIÓN',
             amount: null,
             notes: null
         },

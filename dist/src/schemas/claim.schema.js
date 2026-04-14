@@ -23,7 +23,7 @@ export const CreateClaimSchema = z.object({
         .default([])
 });
 export const UpdateStatusSchema = z.object({
-    status: z.enum(['EN_REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'], {
+    status: z.enum(['EN REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'], {
         message: "Estado inválido"
     }),
     note: z.string()

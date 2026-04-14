@@ -8,7 +8,7 @@ export declare const CreateClaimSchema: z.ZodObject<{
 }, z.core.$strip>;
 export declare const UpdateStatusSchema: z.ZodObject<{
     status: z.ZodEnum<{
-        EN_REVISIÓN: "EN_REVISIÓN";
+        "EN REVISI\u00D3N": "EN REVISIÓN";
         APROBADO: "APROBADO";
         RECHAZADO: "RECHAZADO";
         PAGADO: "PAGADO";

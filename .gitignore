@@ -10,6 +10,9 @@ node_modules/
 # Prisma / DB
 /src/generated/prisma/
 node_modules/.prisma/
+# Local SQLite DB files
+dev.db
+prisma/dev.db
 
 
 # Logs & coverage

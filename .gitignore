@@ -12,7 +12,7 @@ node_modules/
 node_modules/.prisma/
 # Local SQLite DB files
 dev.db
-prisma/dev.db
+#prisma/dev.db
 
 
 # Logs & coverage

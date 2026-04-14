@@ -22,7 +22,7 @@ export interface CreateClaimDTO {
 
 export enum ClaimStatus {
   PENDIENTE = 'PENDIENTE',
-  EN_REVISIÓN = 'EN_REVISIÓN',
+  EN_REVISIÓN = 'EN REVISIÓN',
   APROBADO = 'APROBADO',
   RECHAZADO = 'RECHAZADO',
   PAGADO = 'PAGADO'

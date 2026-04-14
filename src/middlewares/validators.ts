@@ -69,7 +69,7 @@ export const validateUpdateStatus = [
     .escape(),
   body('status')
     .isString()
-    .isIn(['PENDIENTE', 'EN_REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'])
+    .isIn(['PENDIENTE', 'EN REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'])
     .withMessage('Estado inválido')
     .trim(),
   body('amount')
@@ -91,7 +91,7 @@ export const validateUpdateStatus = [
 export const validateQueryFilters = [
   body('status')
     .optional()
-    .isIn(['PENDIENTE', 'EN_REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'])
+    .isIn(['PENDIENTE', 'EN REVISIÓN', 'APROBADO', 'RECHAZADO', 'PAGADO'])
     .withMessage('Estado inválido'),
   body('date')
     .optional()
